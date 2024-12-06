@@ -152,7 +152,16 @@ a {
     width: 6px;
 }
 
-
+.first::after {
+    width: 0px;
+    height: 0px;
+    content: "";
+    border: 8px solid transparent;
+    border-left-color: #b4d9e0;
+    position: absolute;
+    top: 6px;
+    left: 50px;
+}
 
 .hen3 {
     height: 15px;
@@ -185,7 +194,16 @@ a {
     background-color: #bef6ff;
 }
 
-
+.second::after {
+    width: 0px;
+    height: 0px;
+    content: "";
+    border: 8px solid transparent;
+    border-left-color: #b4d9e0;
+    position: absolute;
+    top: 6px;
+    left: 50px;
+}
 
 .neirong {
     width: 440px;
