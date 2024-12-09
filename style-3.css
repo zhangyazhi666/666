@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 1659px;
+    position: relative;
+    height: 722px;
+
+
+    background-image: url(https://zhangyazhi-666.oss-cn-beijing.aliyuncs.com/Camera_XHS_17329551641780302ci016jkpbwdbl9v0116h9.jpg);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+
+}
+
+.container div {
+    opacity: 0.5;
+    box-shadow: 5px 5px 10px #000;
+}
+
+.english {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    color: #fff;
+    text-align: center;
+    transition: all 0.5s ease;
+    font-family: sans-serif;
+}
+
+.wenzi {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 70px;
+    color: #fff;
+    text-align: center;
+    transition: all 0.5s ease;
+    font-family: serif;
+}
+
+.container:hover {
+
+
+    .english {
+        font-size: 20px;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .wenzi {
+        font-size: 20px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .box1 {
+        left: 50px;
+        box-shadow: 5px 5px 10px #000;
+    }
+
+    .box2 {
+        left: 50px;
+        box-shadow: 5px 5px 10px #000;
+    }
+
+    .box3 {
+        right: 50px;
+        box-shadow: 5px 5px 10px #000;
+    }
+
+    .box4 {
+        right: 50px;
+        box-shadow: 5px 5px 10px #000;
+    }
+}
+
+.box1 {
+    height: 722px;
+    width: 450px;
+    position: absolute;
+    top: 0;
+    left: -60px;
+    background-image: url(https://zhangyazhi-666.oss-cn-beijing.aliyuncs.com/logo1.jpg);
+    background-repeat: no-repeat;
+    clip-path: polygon(0 0, 70% 0, 100% 100%, 0 100%);
+    transition: all 0.5s ease;
+    box-shadow: 5px 5px 10px #000;
+}
+
+
+
+
+.box2 {
+    height: 722px;
+    width: 450px;
+    position: absolute;
+    top: 0;
+    left: 0px;
+    background-image: url(https://zhangyazhi-666.oss-cn-beijing.aliyuncs.com/logo1.jpg);
+    background-repeat: no-repeat;
+    clip-path: polygon(0 0, 100% 0, 70% 100%, 0 100%);
+    transition: all 0.5s ease;
+    box-shadow: 5px 5px 10px #000;
+}
+
+
+
+.box3 {
+    height: 722px;
+    width: 400px;
+    position: absolute;
+    top: 0;
+    right: -60px;
+    background-image: url(https://zhangyazhi-666.oss-cn-beijing.aliyuncs.com/logo2.png);
+    background-repeat: no-repeat;
+    clip-path: polygon(30% 0, 100% 0, 1000% 100%, 0 100%);
+    transition: all 0.5s ease;
+    box-shadow: 5px 5px 10px #000;
+    background-size: cover;
+}
+
+.box4 {
+    height: 722px;
+    width: 400px;
+    position: absolute;
+    top: 0;
+    right: 0px;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 30% 100%);
+    background-image: url(https://zhangyazhi-666.oss-cn-beijing.aliyuncs.com/logo2.png);
+    background-repeat: no-repeat;
+    transition: all 0.5s ease;
+    box-shadow: 5px 5px 10px #000;
+    background-size: cover;
+}
