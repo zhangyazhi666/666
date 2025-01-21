@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document2</title>
+    <style>
+        body {
+            margin: 200px auto;
+            height: 200px;
+            width: 300px;
+        }
+
+        .big {
+            border: 1px solid blue;
+            padding: 20px;
+            margin: 0 auto;
+            width: 263px;
+            height: 136px;
+            background-color: rgb(227, 227, 245);
+        }
+
+        button {
+            position: relative;
+            top: 42px;
+            left: -173px;
+        }
+
+        .show {
+            position: relative;
+            top: -32px;
+            left: 182px;
+        }
+
+        .big1 {
+            border: 1px solid blue;
+            padding: 20px;
+            margin: 0 auto;
+            width: 263px;
+            height: 166px;
+            background-color: rgb(227, 227, 245);
+        }
+
+        div,
+        button {
+            font-family: 'Brush Script MT', cursive;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="big">
+        <div>邮箱</div>
+        <input type="text" class="email">
+        <div>密码</div>
+
+        <input type="password" class="mima">
+        <button class="key">登录</button>
+        <button class="show">隐藏密码</button>
+    </div>
+
+
+    <div class="big1">
+        <div>登录成功</div>
+        <img src="" alt="">
+        <div>姓名：<span class="name"></span></div>
+        <div>年龄：<span class="age"></span></div>
+        <div>特长：<span class="strengths"></span></div>
+    </div>
+
+    <script>
+        let msg = [{
+            name: '张三',
+            age: 20,
+            strengths: 'JavaScript',
+            avatar: 'https://tse4-mm.cn.bing.net/th/id/OIP-C.39mOMBjUfsK-HL9jUbv1MwHaE7?pid=ImgDet&rs=1',
+            email: 'yunding@qq.com',
+            password: 33333
+        },
+        {
+            name: '李四',
+            age: 19,
+            strengths: 'python',
+            avatar: 'https://tse2-mm.cn.bing.net/th/id/OIP-C.YlKimVo94OkaZDZCzPIDpAHaFh?pid=ImgDet&rs=1',
+            email: '12345678@163.com',
+            password: 11111
+        },
+        {
+            name: '王五',
+            age: 18,
+            strengths: 'Java',
+            avatar: 'https://tse2-mm.cn.bing.net/th/id/OIP-C.P2hK9SRjhFE8WM9N8tgWFAHaEQ?pid=ImgDet&rs=1',
+            email: 'yundingshuyuan@qq.cn',
+            password: 222222
+        },
+        ]
+
+
+        let mima = document.querySelector('.mima')
+        let key = document.querySelector('.key')
+        let show = document.querySelector('.show')
+        let big1 = document.querySelector('.big1')
+        let big = document.querySelector('.big')
+        big1.style.display = 'none'
+        show.addEventListener('click', function () {
+            if (mima.type == 'text') {
+                mima.type = 'password'
+                show.innerHTML = '显示密码'
+            } else {
+                mima.type = 'text'
+                show.innerHTML = '隐藏密码'
+            }
+        })
+
+        key.addEventListener('click', function () {
+
+            let email = document.querySelector('.email').value
+            let mimaVal = document.querySelector('.mima').value
+            if (email != '' && mimaVal != '') {
+                let emailRegex = /^[a-zA-Z0-9._%+-]+@(qq|163)\.[a-zA-Z]{2,}(\.(com|cn))$/
+                if (emailRegex.test(email) === true) {
+
+                    alert('邮箱格式错误')
+
+                }
+                else {
+
+
+                    for (let i = 0; i < msg.length; i++) {
+                        if (msg[i].email == email && msg[i].password == mimaVal) {
+                            alert('登录成功')
+                            big.style.display = 'none'
+                            big1.style.display = 'block'
+                            let name = document.querySelector('.name')
+                            let age = document.querySelector('.age')
+                            let strengths = document.querySelector('.strengths')
+                            name.innerHTML = msg[i].name
+                            age.innerHTML = msg[i].age
+                            strengths.innerHTML = msg[i].strengths
+                            let img = document.querySelector('img')
+                            img.src = msg[i].avatar
+                            img.style.width = '100px'
+                            break
+                        } else if (msg[i].email == email && msg[i].password != mimaVal) {
+                            alert('密码错误')
+
+                        } else if (msg[i].email != email && msg[i].password == mimaVal) {
+                            alert('邮箱错误,该用户不存在，请先注册')
+
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

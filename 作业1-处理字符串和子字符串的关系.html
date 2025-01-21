@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document1</title>
+
+    <style>
+        body {
+            margin: 200px auto;
+            height: 200px;
+            width: 300px;
+
+        }
+
+        .big {
+            border: 1px solid blue;
+            padding: 20px;
+            margin: 0 auto;
+            width: 263px;
+            height: 136px;
+            background-color: rgb(227, 227, 245);
+        }
+
+        div,
+        button {
+            font-family: 'Brush Script MT', cursive;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="big">
+        <div>请输入一个字符串：</div>
+        <input type="text" id="input1">
+        <div>请输入一个子串：</div>
+        <input type="text" id="input2">
+        <button class="key">提交</button>
+        <div>子串出现的次数为：</div>
+        <div class="daan"></div>
+    </div>
+
+
+    <script>
+        function getAnswer() {
+            const input1 = document.getElementById('input1').value
+            const input2 = document.getElementById('input2').value
+            let count = 0
+            let i = 0
+            while (i < input1.length) {
+                let j = 0
+                let k = i
+
+                while (k < input1.length && j < input2.length && input1[k] === input2[j]) {
+                    k++
+                    j++
+                }
+                if (j === input2.length) {
+                    count++
+                }
+                i++
+
+            }
+            console.log(count);
+
+            document.querySelector('.daan').innerHTML = count
+        }
+        const key = document.querySelector('.key')
+        key.addEventListener('click', getAnswer)
+
+
+    </script>
+</body>
+
+</html>
