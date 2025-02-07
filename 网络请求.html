@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh - CN">
+
+<head>
+    <meta charset="UTF - 8">
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0">
+    <title>网络请求</title>
+    <style>
+        body {
+            font-family: Arial, sans - serif;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input {
+            margin-bottom: 10px;
+        }
+
+        #loading {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>网络请求</h1>
+    <p>当前时间：<span id="currentTime"></span></p>
+    <label for="account">账号：</label>
+    <input type="text" id="account" />
+    <label for="password">密码：</label>
+    <input type="password" id="password" />
+    <button id="registerBtn">注册</button>
+    <button id="getUserListBtn">获取用户列表</button>
+    <div id="userList"></div>
+    <p id="loading">加载中...</p>
+    <script src="网络请求.js"></script>
+</body>
+
+</html>
